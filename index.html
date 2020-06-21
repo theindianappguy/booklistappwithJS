@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/1db905cd03.js" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/flatly/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-mhpbKVUOPCSocLzx2ElRISIORFRwr1ZbO9bAlowgM5kO7hnpRBe+brVj8NNPUiFs" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
+    <title>MyBookList App</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">MyBookList</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="display-4 text-center">
+            <i class="fas fa-book-open"></i>
+            My<span class="text-primary">Book</span>List</h1>
+
+        <!-- form -->
+        <form id="book-form">
+            <div class="form-group mt-3">
+                <label for="title">Title</label>
+                <input id="title" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="author">Author</label>
+                <input id="author" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="isbn">ISBN#</label>
+                <input id="isbn" type="text" class="form-control">
+            </div>
+
+            <input type="submit" value="Add Book" class="btn btn-primary btn-block">
+        </form>
+
+        <table class="table table-striped mt-5">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody id="book-list"></tbody>
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
